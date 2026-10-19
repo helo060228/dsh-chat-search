@@ -1,0 +1,4 @@
+# dsh-chat-search 插件层配置
+- insert:
+    - id: dsh-chat-search
+      name: dsh-chat-search

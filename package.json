@@ -1,0 +1,60 @@
+{
+  "name": "dsh-chat-search",
+  "version": "1.0.0",
+  "description": "DSH 对话搜索插件：支持全局跨会话搜索与当前会话内精准搜索，快速定位上下文并高亮锁定",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "chat-search",
+    "session",
+    "search",
+    "history"
+  ],
+  "author": "helo060228",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helo060228/dsh-chat-search.git"
+  },
+  "homepage": "https://github.com/helo060228/dsh-chat-search#readme",
+  "bugs": {
+    "url": "https://github.com/helo060228/dsh-chat-search/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}
