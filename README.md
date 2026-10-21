@@ -4,6 +4,19 @@ English | [简体中文](README.zh.md)
 
 Chat search and context highlighting plugin for DeepSeek Harness (DSH). Supports global cross-session search across all tasks and precise in-chat keyword searching.
 
+## Security and compatibility
+
+Version 1.0.1 requires DSH 0.2.1-rc.2 or later. Search is registered through
+DSH's protected Connection Fetch dispatcher and is restricted to an authenticated
+owner. Missing or failing authentication closes access before session discovery
+or reading; there is no public WebServer route fallback. Responses produced by
+the plugin use `Cache-Control: no-store`, omit cross-origin permission headers,
+and return generic errors without internal paths or session text.
+
+The browser client continues to use same-origin requests and the normal DSH
+login. After updating, reload the host and browser to load the new code. Run
+`npm test` for synthetic regression tests; these tests do not use personal chats.
+
 ## ✨ Features
 
 - 🌐 **Global Cross-Session Search**:
