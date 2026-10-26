@@ -50,7 +50,7 @@
     },
     "client": {
       "platform": "web",
-      "inject": []
+      "inject": ["slots", "sessions", "uiWorkspace", "uiConversation", "locale"]
     }
   },
   "peerDependencies": {
