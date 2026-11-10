@@ -23,7 +23,8 @@ login. After updating, reload the host and browser to load the new code. Run
   - Scan all task sessions and history across multiple workspaces;
   - Context extraction with keyword match snippets;
   - Group and collapse matches by session, showing roles (user/assistant), turn indices, and timestamps;
-  - Click to switch sessions automatically with smooth scrolling and glow highlight animations.
+  - Click a match once to switch sessions through `uiWorkspace.openSession`, wait for the session to open and `loadThrough` to finish loading history, then locate and highlight the message inside the destination chat.
+  - New clicks, leaving the destination, or unloading the plugin cancel stale jumps; an unfinished jump displays a status message.
 
 - 💬 **In-Chat Search**:
   - Search within the current active session in real-time;
